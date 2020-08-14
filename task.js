@@ -11,7 +11,7 @@ function updateLocalstorage() {
     for (let item in taskListArray) {
         storageArray.push(taskListArray[item].querySelector('div.task__title').textContent);
     };
-    localStorage.clear();
+    localStorage.removeItem('taskList');
     localStorage.setItem('taskList', JSON.stringify(storageArray));
     removeFromTaskList();
 };
